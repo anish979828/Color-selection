@@ -1,0 +1,10 @@
+.button{
+    width: 10rem;
+    height: 10rem;
+    margin: 5px;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
