@@ -154,8 +154,14 @@ let main = document.querySelector("main")
 let header = document.querySelector("header")
 let h1 = document.querySelector("h1")
 
-header.addEventListener("click" ,function(){
-    h1.innerText = "🎨Choose a Color!"
+header.addEventListener("click" ,function(event){
+    if(event.shiftKey == true){
+        h1.innerText = "🎨Choose a Color!"
+    }else{
+        h1.innerText = "plz use sift key!"
+        header.style.background = "white"
+    }
+    
 })
 
 
@@ -166,7 +172,6 @@ Color.forEach(color => {
     button.style.backgroundColor = color;
     main.append(button)
     button.addEventListener("click" , function(){
-        
         header.style.background = color;
         h1.innerText = color;
     })
